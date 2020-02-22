@@ -5,7 +5,6 @@
  "engine": "InnoDB",
  "field_order": [
   "invoice_number",
-  "invoice_date",
   "item_code",
   "qty",
   "rate"
@@ -16,39 +15,28 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Invoice Number",
-   "options": "Purchase Invoice",
-   "read_only": 1
+   "options": "Purchase Order"
   },
   {
    "fieldname": "item_code",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Item Code",
-   "read_only": 1
+   "label": "Item Code"
   },
   {
    "fieldname": "qty",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Qty",
-   "read_only": 1
+   "label": "Qty"
   },
   {
    "fieldname": "rate",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Rate",
-   "read_only": 1
-  },
-  {
-   "fieldname": "invoice_date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Invoice Date",
-   "read_only": 1
+   "label": "Rate"
   }
  ],
- "modified": "2019-10-31 01:19:46.474972",
+ "modified": "2020-02-22 15:39:31.181133",
  "modified_by": "Administrator",
  "module": "Last Records",
  "name": "Last Purchase Table",
