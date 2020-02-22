@@ -11,12 +11,12 @@ class LastPurchaseTable(Document):
 
 @frappe.whitelist(allow_guest=True)
 def getLastprice(item_code, supplier):
-	balance_qty = "select po.name,po.transaction_date, poitem.item_code,poitem.qty,poitem.rate from `tabPurchase Order Item` poitem,`tabPurchase Order` po where poitem.parent = po.name and poitem.item_code = '"+str(item_code)+"' and po.supplier = '"+str(supplier)+"' and po.docstatus != 2 order by po.creation desc limit 5";
+	balance_qty = "select pinv.name,pitem.item_code,pitem.qty,pitem.rate from `tabPurchase Invoice Item` pitem,`tabPurchase Invoice` pinv where pitem.parent = pinv.name and pitem.item_code = '"+str(item_code)+"' and pinv.supplier = '"+str(supplier)+"' and pinv.docstatus != 2 order by pinv.creation desc limit 5";
 	li=[]
 	dic=frappe.db.sql(balance_qty, as_dict=True)
 	for i in dic:
-		name,posting_date,item_code,qty,rate=i['name'],i['transaction_date'],i['item_code'],i['qty'],i['rate']
-		li.append([name,posting_date,item_code,qty,rate])
+		name,item_code,qty,rate=i['name'],i['item_code'],i['qty'],i['rate']
+		li.append([name,item_code,qty,rate])
 	return li
 
 @frappe.whitelist(allow_guest=True)
