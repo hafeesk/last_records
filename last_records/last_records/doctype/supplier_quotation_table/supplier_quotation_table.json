@@ -1,0 +1,72 @@
+{
+ "creation": "2020-03-09 06:55:41.619498",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "quotation",
+  "supplier",
+  "quotation_date",
+  "item_code",
+  "qty",
+  "rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "quotation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Quotation",
+   "options": "Supplier Quotation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Supplier",
+   "options": "Supplier",
+   "read_only": 1
+  },
+  {
+   "fieldname": "quotation_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Quotation Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-03-09 06:55:41.619498",
+ "modified_by": "Administrator",
+ "module": "Last Records",
+ "name": "Supplier Quotation Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
