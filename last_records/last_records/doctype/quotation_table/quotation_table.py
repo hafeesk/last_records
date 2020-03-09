@@ -21,7 +21,7 @@ def getQuotationprice(item_code, supplier):
 
 @frappe.whitelist(allow_guest=True)
 def getQuotationpriceSupplier(item_code):
-	balance_qty = "select qtn.name,qtn.supplier,qtn.transaction_date,qitem.item_code,qitem.qty,qitem.rate from `tabSupplier Quotation Item` qitem,`tabSupplier Quotation` qtn where qitem.parent = qtn.name and qitem.item_code = '"+str(item_code)+"' and pinv.docstatus = 1 order by qitem.rate desc limit 3"
+	balance_qty = "select qtn.name,qtn.supplier,qtn.transaction_date,qitem.item_code,qitem.qty,qitem.rate from `tabSupplier Quotation Item` qitem,`tabSupplier Quotation` qtn where qitem.parent = qtn.name and qitem.item_code = '"+str(item_code)+"' and qtn.docstatus = 1 order by qitem.rate desc limit 3"
 	li=[]
 	dic=frappe.db.sql(balance_qty, as_dict=True)
 	for i in dic:
