@@ -25,6 +25,6 @@ def getQuotationpriceSupplier(item_code):
 	li=[]
 	dic=frappe.db.sql(balance_qty, as_dict=True)
 	for i in dic:
-		name,supplier,posting_date,item_code,qty,rate=i['name'],i['supplier'],i['posting_date'],i['item_code'],i['qty'],i['rate']
+		name,supplier,posting_date,item_code,qty,rate=i['name'],i['supplier'],i['transaction_date'],i['item_code'],i['qty'],i['rate']
 		li.append([name,supplier,posting_date,item_code,qty,rate])
 	return li
