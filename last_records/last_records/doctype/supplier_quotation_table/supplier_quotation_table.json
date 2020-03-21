@@ -6,6 +6,7 @@
  "field_order": [
   "quotation",
   "supplier",
+  "supplier_name",
   "quotation_date",
   "item_code",
   "qty",
@@ -23,7 +24,6 @@
   {
    "fieldname": "supplier",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Supplier",
    "options": "Supplier",
    "read_only": 1
@@ -57,10 +57,16 @@
    "in_list_view": 1,
    "label": "Rate",
    "read_only": 1
+  },
+  {
+   "fieldname": "supplier_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Supplier Name"
   }
  ],
  "istable": 1,
- "modified": "2020-03-09 06:55:41.619498",
+ "modified": "2020-03-21 12:27:03.342017",
  "modified_by": "Administrator",
  "module": "Last Records",
  "name": "Supplier Quotation Table",

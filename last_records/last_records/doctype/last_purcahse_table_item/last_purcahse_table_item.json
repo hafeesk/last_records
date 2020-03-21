@@ -1,0 +1,52 @@
+{
+ "creation": "2020-03-21 12:19:45.678659",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "lr1",
+  "lr2",
+  "lr3",
+  "lr4"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "lr1",
+   "fieldtype": "Currency",
+   "label": "LR1"
+  },
+  {
+   "fieldname": "lr2",
+   "fieldtype": "Currency",
+   "label": "LR2"
+  },
+  {
+   "fieldname": "lr3",
+   "fieldtype": "Currency",
+   "label": "LR3"
+  },
+  {
+   "fieldname": "lr4",
+   "fieldtype": "Currency",
+   "label": "LR4"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-03-21 12:21:16.002265",
+ "modified_by": "Administrator",
+ "module": "Last Records",
+ "name": "Last Purcahse Table Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
