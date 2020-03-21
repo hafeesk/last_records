@@ -6,6 +6,7 @@
  "field_order": [
   "invoice_number",
   "supplier",
+  "supplier_name",
   "invoice_date",
   "item_code",
   "qty",
@@ -23,7 +24,6 @@
   {
    "fieldname": "supplier",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Supplier",
    "options": "Supplier",
    "read_only": 1
@@ -57,9 +57,15 @@
    "in_list_view": 1,
    "label": "Rate",
    "read_only": 1
+  },
+  {
+   "fieldname": "supplier_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Supplier Name"
   }
  ],
- "modified": "2019-10-31 01:31:35.750257",
+ "modified": "2020-03-21 11:42:18.785021",
  "modified_by": "Administrator",
  "module": "Last Records",
  "name": "Last Supplier Purchase Table",
