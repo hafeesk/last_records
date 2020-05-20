@@ -11,6 +11,19 @@ app_color = "grey"
 app_email = "hardikgadesha@gmail.com"
 app_license = "MIT"
 
+
+fixtures = [
+	{
+		"dt":"Custom Field", 
+		"filters": [
+			[
+				"fieldname", "in", ( "quotation_tables_section", "quotation_table", "supplier_quotation_tables_section",
+					"supplier_quotation_table",
+                )
+            ]
+        ]
+    }
+]
 # Includes in <head>
 # ------------------
 
