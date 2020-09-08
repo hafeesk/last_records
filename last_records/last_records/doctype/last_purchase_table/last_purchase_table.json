@@ -12,10 +12,9 @@
  "fields": [
   {
    "fieldname": "invoice_number",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Invoice Number",
-   "options": "Purchase Invoice"
+   "label": "Receipt Number"
   },
   {
    "fieldname": "item_code",
@@ -36,7 +35,7 @@
    "label": "Rate"
   }
  ],
- "modified": "2020-02-22 16:23:06.378680",
+ "modified": "2020-09-08 11:23:55.878788",
  "modified_by": "Administrator",
  "module": "Last Records",
  "name": "Last Purchase Table",

@@ -11,7 +11,7 @@ class LastPurchaseTable(Document):
 
 @frappe.whitelist(allow_guest=True)
 def getLastprice(item_code, supplier):
-	balance_qty = "select pinv.name,pitem.item_code,pitem.qty,pitem.rate from `tabPurchase Invoice Item` pitem,`tabPurchase Invoice` pinv where pitem.parent = pinv.name and pitem.item_code = '"+str(item_code)+"' and pinv.supplier = '"+str(supplier)+"' and pinv.docstatus != 2 order by pinv.creation desc limit 5";
+	balance_qty = "select prv.name,pitem.item_code,pitem.qty,pitem.rate from `tabPurchase Receipt Item` pitem,`tabPurchase Receipt` prv where pitem.parent = prv.name and pitem.item_code = '"+str(item_code)+"' and prv.supplier = '"+str(supplier)+"' and prv.docstatus != 2 order by prv.creation desc limit 5"
 	li=[]
 	dic=frappe.db.sql(balance_qty, as_dict=True)
 	for i in dic:
@@ -21,7 +21,7 @@ def getLastprice(item_code, supplier):
 
 @frappe.whitelist(allow_guest=True)
 def getLastpriceSupplier(item_code):
-	balance_qty = "select pinv.name,pinv.supplier_name,pinv.posting_date,pitem.item_code,pitem.qty,pitem.rate from `tabPurchase Invoice Item` pitem,`tabPurchase Invoice` pinv where pitem.parent = pinv.name and pitem.item_code = '"+str(item_code)+"' and pinv.docstatus = 1 order by pinv.creation desc limit 3";
+	balance_qty = "select prv.name,prv.supplier_name,prv.posting_date,pitem.item_code,pitem.qty,pitem.rate from `tabPurchase Receipt Item` pitem,`tabPurchase Receipt` prv where pitem.parent = prv.name and pitem.item_code = '"+str(item_code)+"' and prv.docstatus = 1 order by prv.creation desc limit 3"
 	li=[]
 	dic=frappe.db.sql(balance_qty, as_dict=True)
 	for i in dic:
