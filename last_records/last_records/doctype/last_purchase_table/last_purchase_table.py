@@ -41,17 +41,17 @@ def getLastItempriceSupplier(item_code):
 
 @frappe.whitelist(allow_guest=True)
 def getLastSalesprice(item_code):
-	balance_qty = "select sinv.name,sinv.customer,sinv.posting_date,sitem.item_code,sitem.qty,sitem.rate from `tabSales Invoice Item` sitem,`tabSales Invoice` sinv where sitem.parent = sinv.name and sitem.item_code = '"+str(item_code)+"' and sinv.docstatus = 1 order by sinv.creation desc limit 3";
+	balance_qty = "select sinv.name,sinv.customer_name,sinv.posting_date,sitem.item_code,sitem.qty,sitem.rate from `tabSales Invoice Item` sitem,`tabSales Invoice` sinv where sitem.parent = sinv.name and sitem.item_code = '"+str(item_code)+"' and sinv.docstatus = 1 order by sinv.creation desc limit 1";
 	li=[]
 	dic=frappe.db.sql(balance_qty, as_dict=True)
 	for i in dic:
-		name,customer,posting_date,item_code,qty,rate=i['name'],i['customer'],i['posting_date'],i['item_code'],i['qty'],i['rate']
-		li.append([name,customer,posting_date,item_code,qty,rate])
+		name,customer_name,posting_date,item_code,qty,rate=i['name'],i['customer_name'],i['posting_date'],i['item_code'],i['qty'],i['rate']
+		li.append([name,customer_name,posting_date,item_code,qty,rate])
 	return li
 
 @frappe.whitelist(allow_guest=True)
 def getLastSalespriceCustomer(item_code, customer):
-	balance_qty = "select sinv.name,sinv.posting_date,sitem.item_code,sitem.qty,sitem.rate from `tabSales Invoice Item` sitem,`tabSales Invoice` sinv where sitem.parent = sinv.name and sitem.item_code = '"+str(item_code)+"' and sinv.customer = '"+str(customer)+"' and sinv.docstatus = 1 order by sinv.creation desc limit 3";
+	balance_qty = "select sinv.name,sinv.posting_date,sitem.item_code,sitem.qty,sitem.rate from `tabSales Invoice Item` sitem,`tabSales Invoice` sinv where sitem.parent = sinv.name and sitem.item_code = '"+str(item_code)+"' and sinv.customer = '"+str(customer)+"' and sinv.docstatus = 1 order by sinv.creation desc limit 1";
 	li=[]
 	dic=frappe.db.sql(balance_qty, as_dict=True)
 	for i in dic:
