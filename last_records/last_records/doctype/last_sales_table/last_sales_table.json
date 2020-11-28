@@ -8,6 +8,7 @@
   "invoice_date",
   "item_code",
   "qty",
+  "base_uom_rate",
   "rate"
  ],
  "fields": [
@@ -46,9 +47,15 @@
    "in_list_view": 1,
    "label": "Invoice Date",
    "read_only": 1
+  },
+  {
+   "fieldname": "base_uom_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Paper Cup and Plate Rate"
   }
  ],
- "modified": "2020-09-08 16:36:41.583941",
+ "modified": "2020-11-28 17:09:53.633113",
  "modified_by": "Administrator",
  "module": "Last Records",
  "name": "Last Sales Table",
