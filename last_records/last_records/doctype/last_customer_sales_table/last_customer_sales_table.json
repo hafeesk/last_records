@@ -46,10 +46,8 @@
    "read_only": 1
   },
   {
-   "columns": 1,
    "fieldname": "qty",
    "fieldtype": "Float",
-   "in_list_view": 1,
    "label": "Qty",
    "read_only": 1
   },
@@ -69,7 +67,7 @@
    "label": "base_uom_rate"
   }
  ],
- "modified": "2020-11-28 17:49:23.112473",
+ "modified": "2020-11-28 18:00:07.784044",
  "modified_by": "Administrator",
  "module": "Last Records",
  "name": "Last Customer Sales Table",
