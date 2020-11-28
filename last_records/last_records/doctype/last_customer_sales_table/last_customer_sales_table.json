@@ -14,6 +14,7 @@
  ],
  "fields": [
   {
+   "columns": 1,
    "fieldname": "invoice_number",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -21,6 +22,7 @@
    "read_only": 1
   },
   {
+   "columns": 1,
    "fieldname": "customer",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -36,6 +38,7 @@
    "read_only": 1
   },
   {
+   "columns": 1,
    "fieldname": "item_code",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -51,7 +54,7 @@
    "read_only": 1
   },
   {
-   "columns": 1,
+   "columns": 2,
    "fieldname": "rate",
    "fieldtype": "Currency",
    "in_list_view": 1,
@@ -59,13 +62,14 @@
    "read_only": 1
   },
   {
+   "columns": 2,
    "fieldname": "base_uom_rate",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Last Customer Sales Table"
+   "label": "base_uom_rate"
   }
  ],
- "modified": "2020-11-28 17:12:40.324611",
+ "modified": "2020-11-28 17:49:23.112473",
  "modified_by": "Administrator",
  "module": "Last Records",
  "name": "Last Customer Sales Table",
